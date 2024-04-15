@@ -2,20 +2,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tetris-deployment
+  name: my-pharmacy-deployment
 spec:
-  replicas: 2 # You can adjust the number of replicas as needed
+  replicas: 1
   selector:
     matchLabels:
-      app: tetris
+      app: my-pharmacy
   template:
     metadata:
       labels:
-        app: tetris
+        app: my-pharmacy
     spec:
       containers:
-        - name: tetris
-          image: adijaiswal/tetris:v2 # Replace with the actual image tag
-          ports:
-            - containerPort: 80 # Replace with the port your Tetris game listens on
-
+      - name: pharmacy
+        image: santoshkitta/pharmacy-1
+        ports:
+        - containerPort: 7000
+          # env:   # Setting Enviornmental Variables
+          # - name: MYSQL_HOST   # Setting Database host address from configMap
+          # value: my-mysql-service
+          # - name: MYSQL_DATABASE  # Setting Database name from configMap
+          # value: pharmacy
+          # - name: MYSQL_USERNAME  # Setting Database username from Secret
+          # value: root
+          # - name: MYSQL_ROOT_PASSWORD # Setting Database password from Secret
+          # value: Root@123
