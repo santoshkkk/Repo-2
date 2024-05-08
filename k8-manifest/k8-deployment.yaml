@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -27,3 +26,4 @@ spec:
             value: root
           - name: MYSQL_ROOT_PASSWORD # Setting Database password from Secret
             value: Root@123
+
