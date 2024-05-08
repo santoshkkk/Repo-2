@@ -20,7 +20,7 @@ spec:
         - containerPort: 7000
         env:   # Setting Enviornmental Variables
         - name: MYSQL_HOST   # Setting Database host address from configMap
-          value: mysql
+          value: my-mysql-service
         - name: MYSQL_DATABASE  # Setting Database name from configMap
           value: pharmacy
         - name: MYSQL_USERNAME  # Setting Database username from Secret
