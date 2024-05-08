@@ -17,13 +17,12 @@ spec:
         image: santoshkitta/pharmacy-img2
         ports:
         - containerPort: 7000
-        env:   # Setting Environmental Variables
-          - name: MYSQL_HOST   # Setting Database host address from configMap
-            value: my-mysql-service
-          - name: MYSQL_DATABASE  # Setting Database name from configMap
-            value: pharmacy
-          - name: MYSQL_USERNAME  # Setting Database username from Secret
-            value: root
-          - name: MYSQL_ROOT_PASSWORD # Setting Database password from Secret
-            value: Root@123
-
+        env:   # Setting Enviornmental Variables
+        - name: MYSQL_HOST   # Setting Database host address from configMap
+          value: my-mysql-service
+        - name: MYSQL_DATABASE  # Setting Database name from configMap
+          value: pharmacy
+        - name: MYSQL_USERNAME  # Setting Database username from Secret
+          value: root
+        - name: MYSQL_ROOT_PASSWORD # Setting Database password from Secret
+          value: Root@123
