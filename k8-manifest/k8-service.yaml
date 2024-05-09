@@ -10,3 +10,4 @@ spec:
       port: 80
       targetPort: 7000
   type: LoadBalancer
+  loadBalancerIP: 4.147.21.187
